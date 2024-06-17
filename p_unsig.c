@@ -6,13 +6,13 @@
 /*   By: jkarhu <jkarhu@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 15:00:15 by jkarhu            #+#    #+#             */
-/*   Updated: 2024/05/16 12:15:43 by jkarhu           ###   ########.fr       */
+/*   Updated: 2024/06/17 09:26:54 by jkarhu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int static	p_posnum(unsigned int n)
+static	int	p_posnum(unsigned int n)
 {
 	int	error;
 
@@ -33,8 +33,6 @@ int	p_unsig(unsigned int n)
 	int	len;
 
 	len = 0;
-	if (n < 0)
-		n = ~n + 1;
 	if (p_posnum(n) == -1)
 		return (-1);
 	if (n == 0)
